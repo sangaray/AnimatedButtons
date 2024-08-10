@@ -1,0 +1,183 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	background-color: #333;
+	font-family: sans-serif;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn {
+	padding: 2.5rem 7rem;
+	cursor: pointer;
+	position: relative;
+	border-radius: 0.3rem;
+	overflow: hidden;
+	border-radius: 25px;
+	font-size: 1.2rem;
+	background-color: #483d8b;
+	color: #ffe4c4;
+}
+
+/* Estilo General del Hover */
+.btn-audio::before,
+.btn-video::before,
+.btn-documento::before,
+.btn-musica::before,
+.btn-imagen::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20%;
+	transform: translate(-50%, -50%);
+	transition: 0.5s ease-in-out;
+}
+
+.btn-audio::after,
+.btn-video::after,
+.btn-documento::after,
+.btn-musica::after,
+.btn-imagen::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	font-size: 1.6rem;
+	font-weight: 700;
+	transition: 0.5s ease-in-out;
+	opacity: 0;
+}
+
+.btn-audio:hover::before,
+.btn-video:hover::before,
+.btn-documento:hover::before,
+.btn-musica:hover::before,
+.btn-imagen:hover::before {
+	transform: translate(-50%, -50%) scale(3);
+	opacity: 0;
+}
+
+.btn-audio:hover::after,
+.btn-video:hover::after,
+.btn-documento:hover::after,
+.btn-musica:hover::after,
+.btn-imagen:hover::after {
+	transform: translate(-50%, -50%) scale(1);
+	opacity: 1;
+}
+
+/* Botón Audio */
+.btn-audio::before {
+	content: url("./images/play-circle.svg");
+}
+
+.btn-audio::after {
+	content: "Audio";
+}
+
+.btn-audio:hover::after {
+	box-shadow: 0 0 15px 10px #ffe4c4;
+	background-color: #ffe4c4;
+	color: #483d8b;
+}
+
+.btn-audio:hover {
+	background-color: #ffe4c4;
+	color: #483d8b;
+	box-shadow: 0 0 100px 5px #ffe4c4;
+}
+
+/* Botón Video */
+.btn-video::before {
+	content: url("./images/youtube.svg");
+}
+
+.btn-video::after {
+	content: "Video";
+}
+
+.btn-video:hover::after {
+	box-shadow: 0 0 15px 10px #b7f6df;
+	background-color: #b7f6df;
+	color: #483d8b;
+}
+
+.btn-video:hover {
+	background-color: #b7f6df;
+	color: #483d8b;
+	box-shadow: 0 0 100px 5px #b7f6df;
+}
+
+/* Botón Documento */
+.btn-documento::before {
+	content: url("./images/documento.svg");
+}
+
+.btn-documento::after {
+	content: "Documento";
+}
+
+.btn-documento:hover::after {
+	box-shadow: 0 0 15px 10px #f2c6cf;
+	background-color: #f2c6cf;
+	color: #483d8b;
+}
+
+.btn-documento:hover {
+	background-color: #f2c6cf;
+	color: #483d8b;
+	box-shadow: 0 0 100px 5px #f2c6cf;
+}
+
+/* Botón Música */
+.btn-musica::before {
+	content: url("./images/music.svg");
+}
+
+.btn-musica::after {
+	content: "Música";
+}
+
+.btn-musica:hover::after {
+	box-shadow: 0 0 15px 10px #94aff8;
+	background-color: #94aff8;
+	color: #483d8b;
+}
+
+.btn-musica:hover {
+	background-color: #94aff8;
+	color: #483d8b;
+	box-shadow: 0 0 100px 5px #94aff8;
+}
+
+/* Botón Imagen */
+.btn-imagen::before {
+	content: url("./images/image.svg");
+}
+
+.btn-imagen::after {
+	content: "Imagen";
+}
+
+.btn-imagen:hover::after {
+	box-shadow: 0 0 15px 10px #cbb6a2;
+	background-color: #cbb6a2;
+	color: #483d8b;
+}
+
+.btn-imagen:hover {
+	background-color: #cbb6a2;
+	color: #483d8b;
+	box-shadow: 0 0 100px 5px #cbb6a2;
+}
